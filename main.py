@@ -20,6 +20,9 @@ Functions:
 # Requirements and constants
 import asyncio
 
+# import mimetypes # noqa
+# mimetypes.add_type('application/x-font-woff', '.woff') # noqa
+
 from fastapi import FastAPI, Request
 from fastapi import responses
 from fastapi.templating import Jinja2Templates
@@ -29,8 +32,6 @@ from pathlib import Path
 
 from loguru import logger
 
-import mimetypes
-mimetypes.add_type('application/x-font-woff', '.woff')
 
 # ----------------------------------------------------------------
 
