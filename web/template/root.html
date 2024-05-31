@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+</html>
+
+<head>
+    {% include 'components/html-head.html'%}
+</head>
+
+<body>
+    <section class="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0">
+
+        {% include 'components/header.html'%}
+
+        <main class="mb-auto">
+
+            <div class="divide-y divide-gray-200 dark:divide-gray-700">
+                {% with
+                name="Root",
+                detail="Root page with FastAPI, Jinja2 and Tailwindcss"
+                %}
+                {% include 'components/page-intro.html'%}
+                {% endwith %}
+
+                <ul class="divide-y divide-gray-200 dark:divide-gray-700">
+                    {% with
+                    title="title",
+                    datetime="2024-5-31",
+                    date="May 31, 2024",
+                    detail="detail",
+                    href="#",
+                    keywords=['abc', 'defg', 'hijk', 'lmn', 'opq', 'rstu', 'vw', 'xyz', 'abcdefghijklmnopqrstuvwxyz']
+                    %}
+                    {% include 'components/brief-li.html'%}
+                    {% endwith %}
+
+                    {% with
+                    title="title",
+                    datetime="2024-5-31",
+                    date="May 31, 2024",
+                    detail="detail",
+                    href="#",
+                    keywords=['abc', 'defg', 'hijk', 'lmn', 'opq', 'rstu', 'vw', 'xyz']
+                    %}
+                    {% include 'components/brief-li.html'%}
+                    {% endwith %}
+                </ul>
+
+            </div>
+        </main>
+
+        {% include 'components/footer.html'%}
+    </section>
+</body>
+
+</html>
